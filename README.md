@@ -1,5 +1,13 @@
 # TensorRT-CenterNet
-### demo (GT 1070)
+This repo was originally forked from https://github.com/CaoWGG/TensorRT-CenterNet.
+Best to use nvidia Docker from NGC. Here is a summary:   
+1. nvidia-docker: cuda:10.0-cudnn7-devel-ubuntu18.04
+2.  Make sure to install: apt-get install -y wget vim tree libsm6 libxext6 libxrender-dev software-properties-common libgtest-dev libprotobuf-dev protobuf-compiler libopencv-dev swig gcc
+3. Install TRT 7.0.0
+4. GPU TITAN X, TITAN XP.
+
+I will be replicating this work on Jetson and Jetpack 4.4
+
 * [ctdet_coco_dla_2x](https://github.com/xingyizhou/CenterNet/blob/master/readme/MODEL_ZOO.md)
     * ![image](img/show3.png)
 * [centerface](https://github.com/Star-Clouds/centerface)
@@ -48,18 +56,6 @@
  * maxpool kernel_size = 3
  * calib_img_list.txt : random sample 700 images from COCO2017/val2017
 
-### Enviroments
-1. gtx 1070
-```
-pytorch 1.0-1.1
-ubuntu 1604
-TensorRT 5.0
-onnx-tensorrt v5.0
-cuda 9.0
-```
-2. jetson TX2
-```
-jetpack 4.2
 ```
 
 ### Models
