@@ -22,7 +22,7 @@ from setuptools import setup, find_packages, Extension
 
 __version__ = '0.1.0'
 
-INC_DIRS = []
+INC_DIRS = ["/opt/TensorRT-7.0.0.11/include"]
 
 SWIG_OPTS = [
     '-c++',
@@ -60,7 +60,7 @@ nv_onnx_parser_module = Extension(
     sources=['nv_onnx_parser_bindings.i'],
     swig_opts=SWIG_OPTS,
     extra_objects=[
-        'build/libnvonnxparser.so',
+        '/opt/TensorRT-7.0.0.11/targets/x86_64-linux-gnu/lib/libnvonnxparser.so',
     ],
     include_dirs=INC_DIRS,
     extra_compile_args=EXTRA_COMPILE_ARGS,
@@ -71,7 +71,7 @@ nv_onnx_runtime_module = Extension(
     sources=['nv_onnx_runtime_bindings.i'],
     swig_opts=SWIG_OPTS,
     extra_objects=[
-        'build/libnvonnxparser_runtime.so',
+        '/root/TensorRT-CenterNet/lib/libnvonnxparser_runtime.so',
     ],
     include_dirs=INC_DIRS,
     extra_compile_args=EXTRA_COMPILE_ARGS,

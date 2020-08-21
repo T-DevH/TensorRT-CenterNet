@@ -164,9 +164,9 @@ if(${CMAKE_VERSION} VERSION_LESS ${CMAKE_VERSION_THRESHOLD})
     ${GENCODES} \
     ")
   
-  if((NOT CXX_VERSION_DEFINED) AND (NOT "${CUDA_NVCC_FLAGS}" MATCHES "-std=c\\+\\+11"))
-    list(APPEND CUDA_NVCC_FLAGS -std=c++11)
-  endif()
+  #if((NOT CXX_VERSION_DEFINED) AND (NOT "${CUDA_NVCC_FLAGS}" MATCHES "-std=c\\+\\+11"))
+    #list(APPEND CUDA_NVCC_FLAGS -std=c++11)
+  #endif()
 
 else()
   if(NOT "${CMAKE_CUDA_FLAGS}" MATCHES "-cudart" )
@@ -179,9 +179,9 @@ else()
     ${GENCODES} \
     ")
 
-  if((NOT CXX_VERSION_DEFINED) AND (NOT "${CMAKE_CUDA_FLAGS}" MATCHES "-std=c\\+\\+11"))
-    set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -std=c++11")
-  endif()
+   #if((NOT CXX_VERSION_DEFINED) AND (NOT "${CMAKE_CUDA_FLAGS}" MATCHES "-std=c\\+\\+11"))
+    #set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -std=c++11")
+   #endif()
 
 endif()  
   

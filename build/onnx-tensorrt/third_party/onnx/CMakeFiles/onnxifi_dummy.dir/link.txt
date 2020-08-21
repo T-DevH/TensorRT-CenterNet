@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libonnxifi_dummy.so -o ../../../../lib/libonnxifi_dummy.so CMakeFiles/onnxifi_dummy.dir/onnx/onnxifi_dummy.c.o  -ldl 

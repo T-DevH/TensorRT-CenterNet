@@ -22,7 +22,9 @@ namespace ctdet
         nvinfer1::IHostMemory *modelStream{nullptr};
         int verbosity = (int) nvinfer1::ILogger::Severity::kWARNING;
         nvinfer1::IBuilder* builder = nvinfer1::createInferBuilder(gLogger);
-        nvinfer1::INetworkDefinition* network = builder->createNetwork();
+        const auto explicitBatch = 1U << static_cast<uint32_t>(nvinfer1::NetworkDefinitionCreationFlag::kEXPLICIT_BATCH);
+        nvinfer1::INetworkDefinition *network = builder->createNetworkV2(explicitBatch);
+        //nvinfer1::INetworkDefinition* network = builder->createNetwork();
 
         mPlugins = nvonnxparser::createPluginFactory(gLogger);
         auto parser = nvonnxparser::createParser(*network, gLogger);
