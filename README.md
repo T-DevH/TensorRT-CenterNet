@@ -4,7 +4,7 @@ Best to use nvidia Docker from NGC. Here is a summary:
 1. nvidia-docker: cuda:10.0-cudnn7-devel-ubuntu18.04
 2.  Make sure to install: apt-get install -y wget vim tree libsm6 libxext6 libxrender-dev software-properties-common libgtest-dev libprotobuf-dev protobuf-compiler libopencv-dev swig gcc
 3. Install TRT 7.0.0
-4. GPU TITAN X, TITAN XP.
+4. GPU TITAN X
 
 I will be replicating this work on Jetson and Jetpack 4.4
 
